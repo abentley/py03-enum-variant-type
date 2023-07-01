@@ -3,9 +3,13 @@ name = "py-enum-macro"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
-
 [lib]
 proc-macro = true
+
+[dev-dependencies]
+enum_variant_type = "0.3.1"
+trybuild = "1.0.80"
+
+[dependencies]
+pyo3 = "0.19.0"
+syn = { version = "2.0.22", features = ["extra-traits"]}
