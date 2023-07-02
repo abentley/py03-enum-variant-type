@@ -1,5 +1,5 @@
 [package]
-name = "py-enum-macro"
+name = "pyo3-enum-variant-type"
 version = "0.1.0"
 edition = "2021"
 
