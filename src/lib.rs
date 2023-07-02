@@ -29,6 +29,12 @@ pub fn evt_pyclass(item: TokenStream) -> TokenStream {
                 }
             }
         }
+        impl #ident {
+            fn add_variant_structs(m: &PyModule) -> PyResult<()>{
+                #(m.add_class::<#arms>()?;)*
+                Ok(())
+            }
+        }
     }
     .into()
 }

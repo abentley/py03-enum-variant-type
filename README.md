@@ -14,6 +14,12 @@ enum Foo {
     Green { num: u32 },
 }
 
+#[pymodule]
+fn enum_to_py(_py: Python, m: &PyModule) -> PyResult<()> {
+    Foo::add_variant_structs(m)?;
+    Ok(())
+}
+
 ```
 
 ## What this actually does
