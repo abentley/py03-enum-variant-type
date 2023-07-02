@@ -2,6 +2,13 @@
 name = "pyo3-enum-variant-type"
 version = "0.1.0"
 edition = "2021"
+authors = ["Aaron Bentley <aaron@aaronbentley.com>"]
+description = "Export enums with struct-like variants to pyo3 as structs."
+readme = "README.md"
+categories = ["api-bindings", "development-tools::ffi"]
+keywords = ["pyo3", "python", "cpython", "ffi", "enum"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/abentley/py03-enum-variant-type"
 
 [lib]
 proc-macro = true
