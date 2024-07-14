@@ -4,7 +4,7 @@ use pyo3::prelude::*;
 
 #[derive(Debug, EvtPyclass, EnumVariantType)]
 enum Foo {
-    #[evt(pyclass)]
+    #[evt(pyclass(set_all))]
     Blue { num: i32 },
     #[evt(pyclass)]
     Green { num: u32 },

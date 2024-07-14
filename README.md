@@ -8,7 +8,7 @@ For example:
 
 #[derive(Debug, EvtPyclass, EnumVariantType)]
 enum Foo {
-    #[evt(pyclass)]
+    #[evt(pyclass())]
     Blue { num: i32 },
     #[evt(pyclass)]
     Green { num: u32 },
