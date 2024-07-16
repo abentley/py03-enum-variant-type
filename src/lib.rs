@@ -35,6 +35,16 @@ pub fn evt_pyclass(item: TokenStream) -> TokenStream {
                 Ok(())
             }
         }
+        impl<'source> FromPyObject<'source> for #ident {
+            // Required method
+            fn extract(ob: &'source PyAny) -> PyResult<Self> {
+                if false {}
+                #(else if let Ok(x) = FromPyObject::extract(ob) {
+                    return Ok(#arms::into(x));
+                })*
+                Err(PyErr::new::<PyTypeError, _>("Cannot convert to Foo"))
+            }
+        }
     }
     .into()
 }
