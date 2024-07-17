@@ -8,9 +8,9 @@ For example:
 
 #[derive(Debug, EvtPyclass, EnumVariantType)]
 enum Foo {
-    #[evt(pyclass())]
+    #[evt(pyclass(set_all), derive(FromPyObject))]
     Blue { num: i32 },
-    #[evt(pyclass)]
+    #[evt(pyclass, derive(FromPyObject))]
     Green { num: u32 },
 }
 
